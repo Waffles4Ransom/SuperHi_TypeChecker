@@ -25,6 +25,16 @@ section.options {
   padding: 2rem;
 }
 
+.output {
+    font-size: 4rem;
+    width: 100%;
+    background: none;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    min-height: 100vh;
+}
+
 div.option {
 	margin: 1.5rem 0 0 0;
 }
