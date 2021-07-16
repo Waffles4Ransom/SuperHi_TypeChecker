@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const typesizeTag = document.querySelector(`input[name="typesize"]`)
   const typesizeOutput = document.querySelector('span.typesize-output') 
 
+  const lineheightTag = document.querySelector(`input[name="lineheight"]`)
+  const lineheightOutput = document.querySelector('span.lineheight-output')
+
   //change the display sentence 
   sentenceTag.addEventListener('keyup', function() {
     (this.value ? outputTag.value = this.value : outputTag.value = ogText) 
@@ -20,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
   typesizeTag.addEventListener('input', (e) => {
     outputTag.style.fontSize = e.target.value + 'px'
     typesizeOutput.innerHTML = e.target.value + 'px'
+  })
+
+  //change the leading
+  lineheightTag.addEventListener('input', (e) => {
+    outputTag.style.lineHeight = e.target.value
+    lineheightOutput.innerHTML = e.target.value
   })
 
 })
