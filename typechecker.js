@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const fontweightTag = document.querySelector(`input[name="fontweight"]`)
   const fontweightOutput = document.querySelector('span.fontweight-output')
 
+  const italicTag = document.querySelector(`input[name="italic"]`)
+
   //change the display sentence 
   sentenceTag.addEventListener('keyup', function() {
     (this.value ? outputTag.value = this.value : outputTag.value = ogText) 
@@ -38,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
   fontweightTag.addEventListener('input', (e) => {
     outputTag.style.fontWeight = e.target.value
     fontweightOutput.innerHTML = e.target.value
+  })
+
+  italicTag.addEventListener('change', (e) => {
+    (e.target.checked ? outputTag.style.fontStyle = 'italic' : outputTag.style.fontStyle = 'normal')
   })
 
 })
