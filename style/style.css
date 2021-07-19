@@ -10,7 +10,7 @@ body {
 
   background-color: #2a2a2a;
   color: #ffffff;
-  margin: 40px 40px 40px 320px;
+  margin: 0 0 0 280px;
 }
 
 h1 {
@@ -31,13 +31,14 @@ section.options {
 }
 
 .output {
-    font-size: 4rem;
-    width: 100%;
-    background: none;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    min-height: 100vh;
+  font-size: 4rem;
+  width: 100%;
+  background: none;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  min-height: 100vh;
+  padding: 2.5rem;
 }
 
 div.option {
@@ -70,4 +71,22 @@ input[type="text"] {
 
 input[type=range] {
 	width: 100%;
+}
+
+div.colors {
+  display: flex;
+}
+
+div.colors div {
+  border: 2px solid rgba(9255,255,255, 0.25);
+  border-radius: 50%;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin: 5px 10px 0 0;
+  text-align: center;
+  transition: border 0.25s;
+}
+
+div.colors div.selected {
+  border: 2px solid #ffffff;
 }

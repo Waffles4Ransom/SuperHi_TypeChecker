@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const typefaceTag = document.querySelector(`select[name="typeface"]`)
 
+  const colorTags = document.querySelectorAll('div.colors div')
+
   //change the display sentence 
   sentenceTag.addEventListener('keyup', function() {
     (this.value ? outputTag.value = this.value : outputTag.value = ogText) 
@@ -52,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
   //change the typeface
   typefaceTag.addEventListener('input', (e) => {
     outputTag.style.fontFamily = e.target.value
+  })
+
+  //change output colors
+  colorTags.forEach(tag => {
+    tag.addEventListener('click', (e) =>{
+      outputTag.style.backgroundColor = e.target.style.backgroundColor
+      outputTag.style.color = e.target.style.color
+      colorTags.forEach(t => t.classList.remove("selected"))
+      e.target.classList.add("selected")
+    })
   })
 
 })
