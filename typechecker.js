@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const italicTag = document.querySelector(`input[name="italic"]`)
 
+  const typefaceTag = document.querySelector(`select[name="typeface"]`)
+
   //change the display sentence 
   sentenceTag.addEventListener('keyup', function() {
     (this.value ? outputTag.value = this.value : outputTag.value = ogText) 
@@ -42,8 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
     fontweightOutput.innerHTML = e.target.value
   })
 
+  // make it italic
   italicTag.addEventListener('change', (e) => {
     (e.target.checked ? outputTag.style.fontStyle = 'italic' : outputTag.style.fontStyle = 'normal')
+  })
+
+  //change the typeface
+  typefaceTag.addEventListener('input', (e) => {
+    outputTag.style.fontFamily = e.target.value
   })
 
 })
